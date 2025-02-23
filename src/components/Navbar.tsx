@@ -13,8 +13,12 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <a href="/" className="text-2xl font-playfair font-bold text-primary">
-              2cmotivation
+            <a href="/" className="flex items-center gap-2">
+              <img 
+                src="/lovable-uploads/617718f3-4ea5-4681-ae22-5b6143430b90.png" 
+                alt="2C Motivation Logo" 
+                className="h-10 w-auto"
+              />
             </a>
           </div>
 
@@ -24,12 +28,12 @@ export const Navbar = () => {
               Articles
             </a>
             <a href="#quotes" className="nav-link">
-              Quotes
+              Citations
             </a>
             <a href="#about" className="nav-link">
-              About
+              À Propos
             </a>
-            <Button>Subscribe</Button>
+            <Button href="/connexion">Se Connecter</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -58,16 +62,16 @@ export const Navbar = () => {
               href="#quotes"
               className="block px-3 py-2 rounded-md hover:bg-gray-50"
             >
-              Quotes
+              Citations
             </a>
             <a
               href="#about"
               className="block px-3 py-2 rounded-md hover:bg-gray-50"
             >
-              About
+              À Propos
             </a>
             <div className="px-3 py-2">
-              <Button className="w-full">Subscribe</Button>
+              <Button className="w-full" href="/connexion">Se Connecter</Button>
             </div>
           </div>
         </div>
