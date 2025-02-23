@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 import { Newsletter } from "@/components/Newsletter";
 import { QuoteCard } from "@/components/QuoteCard";
@@ -6,17 +5,45 @@ import { Button } from "@/components/ui/button";
 
 const inspiringQuotes = [
   {
-    quote: "L'avenir appartient à ceux qui croient en la beauté de leurs rêves.",
-    author: "Eleanor Roosevelt",
+    quote: "Ne soyez pas trop honnête dans ce monde, car les arbres droits sont toujours les premiers à être abattus.",
+    author: "2C Motivation",
   },
   {
-    quote: "Le succès n'est pas final, l'échec n'est pas fatal : c'est le courage de continuer qui compte.",
-    author: "Winston Churchill",
+    quote: "Tout le monde ne mérite pas de connaître le vrai vous. Laissez-les critiquer celui qu'ils croient que vous êtes.",
+    author: "2C Motivation",
   },
   {
-    quote: "La seule façon de faire du bon travail est d'aimer ce que vous faites.",
-    author: "Steve Jobs",
+    quote: "Entourez-vous des gens qui font ressortir le meilleur de vous-même, et non le stress.",
+    author: "2C Motivation",
   },
+  {
+    quote: "Les gens ne vous diront peut-être pas toujours ce qu'ils ressentent pour vous, mais ils le montreront toujours. Soyez attentif !",
+    author: "2C Motivation",
+  },
+  {
+    quote: "Faites attention à ceux avec qui vous construisez, car les gens vous utiliseront pour les fondations et finiront la structure avec quelqu'un d'autre.",
+    author: "2C Motivation",
+  },
+  {
+    quote: "La vie ne change pas, mais les gens si. Apprenez à accepter que tout le monde n'est pas celui que vous pensiez connaître.",
+    author: "2C Motivation",
+  },
+  {
+    quote: "N'oubliez jamais qui vous a aidé alors que tout le monde trouvait des excuses.",
+    author: "2C Motivation",
+  },
+  {
+    quote: "La vie ne consiste pas à savoir qui est vrai en face de vous, mais à savoir qui est vrai dans votre dos.",
+    author: "2C Motivation",
+  },
+  {
+    quote: "La vie est belle lorsque vous vous éloignez des personnes négatives, jalouses et malheureuses.",
+    author: "2C Motivation",
+  },
+  {
+    quote: "Éloignez-vous des personnes négatives, elles ont un problème pour chaque solution.",
+    author: "2C Motivation",
+  }
 ];
 
 const articles = [
