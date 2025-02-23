@@ -54,10 +54,12 @@ const Index = () => {
             et vivre votre meilleure vie.
           </p>
           <div className="flex justify-center gap-4 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
-            <Button size="lg" href="/creer">Commencer</Button>
-            <Button size="lg" variant="outline" href="/apropos">
-              En Savoir Plus
-            </Button>
+            <a href="/creer">
+              <Button size="lg">Commencer</Button>
+            </a>
+            <a href="/apropos">
+              <Button size="lg" variant="outline">En Savoir Plus</Button>
+            </a>
           </div>
         </div>
       </section>
@@ -99,9 +101,9 @@ const Index = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{article.title}</h3>
                   <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                  <Button variant="outline" className="w-full" href={`/articles/${index + 1}`}>
-                    Lire Plus
-                  </Button>
+                  <a href={`/articles/${index + 1}`}>
+                    <Button variant="outline" className="w-full">Lire Plus</Button>
+                  </a>
                 </div>
               </article>
             ))}
@@ -121,9 +123,9 @@ const Index = () => {
             vous fournir une inspiration quotidienne et des ressources pratiques pour vous aider à atteindre
             vos objectifs et vivre une vie plus épanouissante.
           </p>
-          <Button variant="outline" size="lg" href="/apropos">
-            En Savoir Plus Sur Nous
-          </Button>
+          <a href="/apropos">
+            <Button variant="outline" size="lg">En Savoir Plus Sur Nous</Button>
+          </a>
         </div>
       </section>
     </div>

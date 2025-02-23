@@ -33,7 +33,9 @@ export const Navbar = () => {
             <a href="#about" className="nav-link">
               À Propos
             </a>
-            <Button href="/connexion">Se Connecter</Button>
+            <a href="/connexion">
+              <Button>Se Connecter</Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -71,7 +73,9 @@ export const Navbar = () => {
               À Propos
             </a>
             <div className="px-3 py-2">
-              <Button className="w-full" href="/connexion">Se Connecter</Button>
+              <a href="/connexion" className="block w-full">
+                <Button className="w-full">Se Connecter</Button>
+              </a>
             </div>
           </div>
         </div>
