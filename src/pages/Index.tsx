@@ -1,6 +1,8 @@
 import { Navbar } from "@/components/Navbar";
 import { Newsletter } from "@/components/Newsletter";
 import { QuoteCard } from "@/components/QuoteCard";
+import { VideoSection } from "@/components/VideoSection";
+import { SearchBar } from "@/components/SearchBar";
 import { Button } from "@/components/ui/button";
 
 const inspiringQuotes = [
@@ -80,6 +82,9 @@ const Index = () => {
             Découvrez des histoires inspirantes, des citations et des ressources pour vous aider à atteindre vos objectifs
             et vivre votre meilleure vie.
           </p>
+          <div className="mb-8 animate-fadeIn" style={{ animationDelay: "0.3s" }}>
+            <SearchBar />
+          </div>
           <div className="flex justify-center gap-4 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
             <a href="/creer">
               <Button size="lg">Commencer</Button>
@@ -108,6 +113,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Video Section */}
+      <VideoSection />
 
       {/* Articles Section */}
       <section id="articles" className="py-16 px-4 sm:px-6 lg:px-8">
