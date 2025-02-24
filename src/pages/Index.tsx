@@ -1,8 +1,10 @@
+
 import { Navbar } from "@/components/Navbar";
 import { Newsletter } from "@/components/Newsletter";
 import { QuoteCard } from "@/components/QuoteCard";
 import { VideoSection } from "@/components/VideoSection";
 import { SearchBar } from "@/components/SearchBar";
+import { QuoteOfTheDay } from "@/components/QuoteOfTheDay";
 import { Button } from "@/components/ui/button";
 
 const inspiringQuotes = [
@@ -86,15 +88,18 @@ const Index = () => {
             <SearchBar />
           </div>
           <div className="flex justify-center gap-4 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
-            <a href="/creer">
-              <Button size="lg">Commencer</Button>
+            <a href="/citations">
+              <Button size="lg">Voir les Citations</Button>
             </a>
-            <a href="/apropos">
+            <a href="/a-propos">
               <Button size="lg" variant="outline">En Savoir Plus</Button>
             </a>
           </div>
         </div>
       </section>
+
+      {/* Citation du Jour */}
+      <QuoteOfTheDay />
 
       {/* Quotes Section */}
       <section id="quotes" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
