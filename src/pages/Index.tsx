@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 import { Newsletter } from "@/components/Newsletter";
 import { QuoteCard } from "@/components/QuoteCard";
@@ -6,6 +5,7 @@ import { VideoSection } from "@/components/VideoSection";
 import { SearchBar } from "@/components/SearchBar";
 import { QuoteOfTheDay } from "@/components/QuoteOfTheDay";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const inspiringQuotes = [
   {
@@ -88,12 +88,12 @@ const Index = () => {
             <SearchBar />
           </div>
           <div className="flex justify-center gap-4 animate-fadeIn" style={{ animationDelay: "0.4s" }}>
-            <a href="/citations">
+            <Link to="/citations">
               <Button size="lg">Voir les Citations</Button>
-            </a>
-            <a href="/a-propos">
+            </Link>
+            <Link to="/a-propos">
               <Button size="lg" variant="outline">En Savoir Plus</Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -141,9 +141,9 @@ const Index = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{article.title}</h3>
                   <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                  <a href={`/articles/${index + 1}`}>
+                  <Link to={`/articles/${index + 1}`}>
                     <Button variant="outline" className="w-full">Lire Plus</Button>
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -163,9 +163,9 @@ const Index = () => {
             vous fournir une inspiration quotidienne et des ressources pratiques pour vous aider à atteindre
             vos objectifs et vivre une vie plus épanouissante.
           </p>
-          <a href="/apropos">
+          <Link to="/a-propos">
             <Button variant="outline" size="lg">En Savoir Plus Sur Nous</Button>
-          </a>
+          </Link>
         </div>
       </section>
     </div>
