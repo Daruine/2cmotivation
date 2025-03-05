@@ -11,22 +11,45 @@ export const QuoteOfTheDay = () => {
 Les petits détails font les grandes histoires d'amour.
 
 Apprenez à voir votre partenaire, à écouter, à apprécier ces petits riens qui créent l'intimité. Ne laissez jamais la routine éteindre l'amour.`,
-    author: "Histoire d'Amour et de Regrets"
+    author: "Histoire d'Amour et de Regrets",
+    displayDate: ""
   });
   const { toast } = useToast();
 
   useEffect(() => {
-    try {
-      const quote = getQuoteOfTheDay();
-      setTodayQuote(quote);
-    } catch (error) {
-      console.error("Erreur lors du chargement de la citation du jour:", error);
-      toast({
-        title: "Erreur",
-        description: "Impossible de charger la citation du jour",
-        variant: "destructive",
-      });
-    }
+    const fetchTodayQuote = () => {
+      try {
+        const quote = getQuoteOfTheDay();
+        setTodayQuote(quote);
+      } catch (error) {
+        console.error("Erreur lors du chargement de la citation du jour:", error);
+        toast({
+          title: "Erreur",
+          description: "Impossible de charger la citation du jour",
+          variant: "destructive",
+        });
+      }
+    };
+
+    // Charger la citation initiale
+    fetchTodayQuote();
+
+    // Vérifier si nous devons changer la citation toutes les minutes
+    const checkForNewQuote = () => {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      
+      // Si l'heure actuelle est 7h30, rafraîchir la citation
+      if (hours === 7 && minutes === 30) {
+        fetchTodayQuote();
+      }
+    };
+
+    // Vérifier périodiquement pour une nouvelle citation
+    const intervalId = setInterval(checkForNewQuote, 60000); // Vérifier chaque minute
+
+    return () => clearInterval(intervalId); // Nettoyage à la désinscription
   }, [toast]);
 
   return (
@@ -41,11 +64,16 @@ Apprenez à voir votre partenaire, à écouter, à apprécier ces petits riens q
             </blockquote>
             <footer className="text-lg text-[#d4a853] mt-auto border-t border-[#d4a853] pt-4">
               — {todayQuote.author}
+              {todayQuote.displayDate && (
+                <div className="text-sm text-white/70 mt-2">
+                  {todayQuote.displayDate}
+                </div>
+              )}
             </footer>
           </div>
         </Card>
         <p className="mt-6 text-white/80 text-sm">
-          Une nouvelle citation motivante chaque jour pour vous inspirer.
+          Une nouvelle citation motivante chaque jour à 7h30 pour vous inspirer.
         </p>
       </div>
     </section>

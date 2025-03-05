@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/Navbar";
 import { Newsletter } from "@/components/Newsletter";
-import { dailyQuotes } from "@/utils/dailyQuotes";
+import { dailyQuotes, formatDateFr } from "@/utils/dailyQuotes";
 import { QuoteCard } from "@/components/QuoteCard";
 import { useToast } from "@/components/ui/use-toast";
 
@@ -36,7 +36,7 @@ const CitationsDuJour = () => {
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Citations du Jour</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Découvrez notre programmation de citations motivantes quotidiennes pour vous inspirer chaque jour
+              Découvrez notre programmation de citations motivantes quotidiennes pour vous inspirer chaque jour à 7h30
             </p>
           </div>
 
@@ -44,11 +44,7 @@ const CitationsDuJour = () => {
             {quotes.map((quote, index) => (
               <div key={index} className="flex flex-col">
                 <div className="text-sm text-gray-500 mb-2">
-                  Programmée pour le: {new Date(quote.date).toLocaleDateString('fr-FR', { 
-                    year: 'numeric', 
-                    month: 'long', 
-                    day: 'numeric' 
-                  })}
+                  Programmée pour le: {formatDateFr(quote.date)}
                 </div>
                 <QuoteCard quote={quote.quote} author={quote.author} />
               </div>

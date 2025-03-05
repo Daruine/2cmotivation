@@ -53,22 +53,56 @@ export const dailyQuotes = [
   }
 ];
 
+// Format de date pour l'affichage
+export const formatDateFr = (dateString: string): string => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('fr-FR', { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+};
+
 /**
- * Retourne la citation du jour selon la date actuelle
+ * Retourne la citation du jour selon la date et l'heure actuelles
+ * Les citations changent à 7h30 chaque matin
  */
 export const getQuoteOfTheDay = () => {
-  const today = new Date();
-  const formattedDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  const now = new Date();
+  const targetHour = 7;
+  const targetMinute = 30;
+  
+  // Créer une date pour aujourd'hui à 7h30
+  const todayTarget = new Date(now);
+  todayTarget.setHours(targetHour, targetMinute, 0, 0);
+  
+  // Si l'heure actuelle est avant 7h30, utiliser la citation d'hier
+  const useYesterday = now < todayTarget;
+  
+  // Ajuster la date en fonction
+  const targetDate = new Date(now);
+  if (useYesterday) {
+    targetDate.setDate(targetDate.getDate() - 1);
+  }
+  
+  const formattedDate = `${targetDate.getFullYear()}-${String(targetDate.getMonth() + 1).padStart(2, '0')}-${String(targetDate.getDate()).padStart(2, '0')}`;
   
   // Recherche d'une citation pour la date exacte
   const quoteForToday = dailyQuotes.find(quote => quote.date === formattedDate);
   
   if (quoteForToday) {
-    return quoteForToday;
+    return {
+      ...quoteForToday,
+      displayDate: formatDateFr(quoteForToday.date)
+    };
   }
   
   // Si aucune citation n'est programmée pour aujourd'hui, utiliser un index basé sur le jour du mois
-  const dayOfMonth = today.getDate();
+  const dayOfMonth = targetDate.getDate();
   const index = dayOfMonth % dailyQuotes.length;
-  return dailyQuotes[index];
+  return {
+    ...dailyQuotes[index],
+    displayDate: formatDateFr(now.toISOString().split('T')[0])
+  };
 };
