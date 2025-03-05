@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import CitationsDuJour from "./pages/CitationsDuJour";
 import Citations from "./pages/Citations";
 import Articles from "./pages/Articles";
+import ArticleDetail from "./pages/ArticleDetail";
 import Videos from "./pages/Videos";
 import APropos from "./pages/APropos";
 import Recherche from "./pages/Recherche";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/citations" element={<Citations />} />
           <Route path="/citations-du-jour" element={<CitationsDuJour />} />
           <Route path="/articles" element={<Articles />} />
+          <Route path="/articles/:id" element={<ArticleDetail />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/recherche" element={<Recherche />} />
