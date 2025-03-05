@@ -24,6 +24,9 @@ export const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="nav-link">
+              Accueil
+            </Link>
             <Link to="/citations" className="nav-link">
               Citations
             </Link>
@@ -57,6 +60,9 @@ export const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-b">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <Link to="/" className="block px-3 py-2 rounded-md hover:bg-gray-50">
+              Accueil
+            </Link>
             <Link to="/citations" className="block px-3 py-2 rounded-md hover:bg-gray-50">
               Citations
             </Link>

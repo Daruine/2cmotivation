@@ -6,6 +6,7 @@ import { SearchBar } from "@/components/SearchBar";
 import { QuoteOfTheDay } from "@/components/QuoteOfTheDay";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { articles } from "@/data/articles";
 
 const inspiringQuotes = [
   {
@@ -48,24 +49,6 @@ const inspiringQuotes = [
     quote: "Éloignez-vous des personnes négatives, elles ont un problème pour chaque solution.",
     author: "2C Motivation",
   }
-];
-
-const articles = [
-  {
-    title: "Trouver Votre Force Intérieure",
-    excerpt: "Découvrez la puissance qui sommeille en vous pour surmonter tous les obstacles...",
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-  },
-  {
-    title: "Le Pouvoir de la Pensée Positive",
-    excerpt: "Apprenez comment les pensées positives peuvent transformer votre vie...",
-    imageUrl: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
-  },
-  {
-    title: "Fixer des Objectifs Atteignables",
-    excerpt: "Maîtrisez l'art de définir et d'atteindre des objectifs significatifs...",
-    imageUrl: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
-  },
 ];
 
 const Index = () => {
@@ -129,7 +112,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {articles.map((article, index) => (
               <article
-                key={index}
+                key={article.id}
                 className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 animate-fadeIn"
                 style={{ animationDelay: `${0.2 * (index + 1)}s` }}
               >
@@ -141,7 +124,7 @@ const Index = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{article.title}</h3>
                   <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                  <Link to={`/articles/${index + 1}`}>
+                  <Link to={`/articles/${article.id}`}>
                     <Button variant="outline" className="w-full">Lire Plus</Button>
                   </Link>
                 </div>
