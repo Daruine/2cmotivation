@@ -1,6 +1,8 @@
 
 import { Card } from "@/components/ui/card";
 import { useState, useEffect } from "react";
+import { getQuoteOfTheDay } from "@/utils/dailyQuotes";
+import { useToast } from "@/components/ui/use-toast";
 
 export const QuoteOfTheDay = () => {
   const [todayQuote, setTodayQuote] = useState({
@@ -11,10 +13,21 @@ Les petits détails font les grandes histoires d'amour.
 Apprenez à voir votre partenaire, à écouter, à apprécier ces petits riens qui créent l'intimité. Ne laissez jamais la routine éteindre l'amour.`,
     author: "Histoire d'Amour et de Regrets"
   });
+  const { toast } = useToast();
 
   useEffect(() => {
-    // La logique pour récupérer une citation aléatoire sera ajoutée plus tard
-  }, []);
+    try {
+      const quote = getQuoteOfTheDay();
+      setTodayQuote(quote);
+    } catch (error) {
+      console.error("Erreur lors du chargement de la citation du jour:", error);
+      toast({
+        title: "Erreur",
+        description: "Impossible de charger la citation du jour",
+        variant: "destructive",
+      });
+    }
+  }, [toast]);
 
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-indigo-900">
@@ -32,7 +45,7 @@ Apprenez à voir votre partenaire, à écouter, à apprécier ces petits riens q
           </div>
         </Card>
         <p className="mt-6 text-white/80 text-sm">
-          Une histoire qui nous rappelle l'importance des petits gestes quotidiens dans l'amour.
+          Une nouvelle citation motivante chaque jour pour vous inspirer.
         </p>
       </div>
     </section>
