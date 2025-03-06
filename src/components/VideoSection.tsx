@@ -13,29 +13,29 @@ interface Video {
 const sampleVideos: Video[] = [
   {
     id: "1",
-    title: "La Corde que tu tentes de casser te rendra plus fort",
-    description: "Une réflexion puissante sur la résilience et la croissance personnelle.",
+    title: "Il n'y a pas de raccourci tout finira pas payer…🤲🏻❤️‍🔥 #motivation #islam #developpementpersonnel",
+    description: "Les épreuves que vous traversez aujourd'hui vous rendront plus fort pour demain.",
     url: "https://www.youtube.com/embed/slTUgQuvg7Y",
     format: "16:9"
   },
   {
     id: "2",
-    title: "Le bonheur est un choix",
-    description: "Un message inspirant sur la recherche du bonheur.",
+    title: "Appréciez chaque moment de votre vie! 🤲🏻❤️‍🔥 #motivation #islam #developpementpersonnel",
+    description: "Un message inspirant sur l'importance d'apprécier chaque instant de notre vie.",
     url: "https://www.youtube.com/embed/rM4LgPbkQ7A",
     format: "9:16"
   },
   {
     id: "3",
-    title: "La route vers le succès",
-    description: "Découvrez les clés pour atteindre vos objectifs.",
+    title: "La vie est un test…🤲🏻❤️‍🔥 #motivation #islam #developpementpersonnel",
+    description: "Un rappel puissant que chaque épreuve dans la vie est un test qui nous fait grandir.",
     url: "https://www.youtube.com/embed/4pnr1YRP-ug",
     format: "9:16"
   },
   {
     id: "4",
-    title: "Le pouvoir de la persévérance",
-    description: "Une leçon importante sur la valeur de la persévérance.",
+    title: "La vie est une question de patience…🤲🏻❤️‍🔥 #motivation #islam #developpementpersonnel",
+    description: "Une réflexion sur l'importance de la patience dans notre parcours de vie.",
     url: "https://www.youtube.com/embed/GN_8rzjIKNM",
     format: "9:16"
   }
