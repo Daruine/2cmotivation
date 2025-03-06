@@ -1,55 +1,12 @@
+
 import { Navbar } from "@/components/Navbar";
 import { Newsletter } from "@/components/Newsletter";
-import { QuoteCard } from "@/components/QuoteCard";
 import { VideoSection } from "@/components/VideoSection";
 import { SearchBar } from "@/components/SearchBar";
 import { QuoteOfTheDay } from "@/components/QuoteOfTheDay";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
-
-const inspiringQuotes = [
-  {
-    quote: "Ne soyez pas trop honnête dans ce monde, car les arbres droits sont toujours les premiers à être abattus.",
-    author: "2C Motivation",
-  },
-  {
-    quote: "Tout le monde ne mérite pas de connaître le vrai vous. Laissez-les critiquer celui qu'ils croient que vous êtes.",
-    author: "2C Motivation",
-  },
-  {
-    quote: "Entourez-vous des gens qui font ressortir le meilleur de vous-même, et non le stress.",
-    author: "2C Motivation",
-  },
-  {
-    quote: "Les gens ne vous diront peut-être pas toujours ce qu'ils ressentent pour vous, mais ils le montreront toujours. Soyez attentif !",
-    author: "2C Motivation",
-  },
-  {
-    quote: "Faites attention à ceux avec qui vous construisez, car les gens vous utiliseront pour les fondations et finiront la structure avec quelqu'un d'autre.",
-    author: "2C Motivation",
-  },
-  {
-    quote: "La vie ne change pas, mais les gens si. Apprenez à accepter que tout le monde n'est pas celui que vous pensiez connaître.",
-    author: "2C Motivation",
-  },
-  {
-    quote: "N'oubliez jamais qui vous a aidé alors que tout le monde trouvait des excuses.",
-    author: "2C Motivation",
-  },
-  {
-    quote: "La vie ne consiste pas à savoir qui est vrai en face de vous, mais à savoir qui est vrai dans votre dos.",
-    author: "2C Motivation",
-  },
-  {
-    quote: "La vie est belle lorsque vous vous éloignez des personnes négatives, jalouses et malheureuses.",
-    author: "2C Motivation",
-  },
-  {
-    quote: "Éloignez-vous des personnes négatives, elles ont un problème pour chaque solution.",
-    author: "2C Motivation",
-  }
-];
 
 const Index = () => {
   return (
@@ -84,27 +41,6 @@ const Index = () => {
       {/* Citation du Jour */}
       <QuoteOfTheDay />
 
-      {/* Quotes Section */}
-      <section id="quotes" className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="section-title text-center">Inspiration Quotidienne</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {inspiringQuotes.map((quote, index) => (
-              <div
-                key={index}
-                className="animate-fadeIn"
-                style={{ animationDelay: `${0.2 * (index + 1)}s` }}
-              >
-                <QuoteCard {...quote} />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Video Section */}
-      <VideoSection />
-
       {/* Articles Section */}
       <section id="articles" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -133,6 +69,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Video Section */}
+      <VideoSection />
 
       {/* Newsletter Section */}
       <Newsletter />
