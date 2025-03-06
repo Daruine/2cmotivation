@@ -13,16 +13,30 @@ interface Video {
 const sampleVideos: Video[] = [
   {
     id: "1",
-    title: "Comment garder sa motivation",
-    description: "Découvrez les secrets pour rester motivé même dans les moments difficiles.",
-    url: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    title: "La Corde que tu tentes de casser te rendra plus fort",
+    description: "Une réflexion puissante sur la résilience et la croissance personnelle.",
+    url: "https://www.youtube.com/embed/slTUgQuvg7Y",
     format: "16:9"
   },
   {
     id: "2",
-    title: "Méditation quotidienne",
-    description: "Une courte méditation pour commencer votre journée du bon pied.",
-    url: "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+    title: "Le bonheur est un choix",
+    description: "Un message inspirant sur la recherche du bonheur.",
+    url: "https://www.youtube.com/embed/rM4LgPbkQ7A",
+    format: "9:16"
+  },
+  {
+    id: "3",
+    title: "La route vers le succès",
+    description: "Découvrez les clés pour atteindre vos objectifs.",
+    url: "https://www.youtube.com/embed/4pnr1YRP-ug",
+    format: "9:16"
+  },
+  {
+    id: "4",
+    title: "Le pouvoir de la persévérance",
+    description: "Une leçon importante sur la valeur de la persévérance.",
+    url: "https://www.youtube.com/embed/GN_8rzjIKNM",
     format: "9:16"
   }
 ];
