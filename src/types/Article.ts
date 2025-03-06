@@ -7,4 +7,5 @@ export interface Article {
   content: string;
   imageUrl: string;
   publishedAt: string;
+  tags?: string[];
 }

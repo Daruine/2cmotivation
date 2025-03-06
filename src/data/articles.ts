@@ -1,4 +1,3 @@
-
 import { Article } from "@/types/Article";
 
 export const articles: Article[] = [
@@ -32,5 +31,73 @@ export const articles: Article[] = [
     `,
     imageUrl: "/lovable-uploads/e2cba51f-91e5-416e-a9ae-b163b564f3d0.png",
     publishedAt: new Date().toISOString()
+  },
+  {
+    id: 2,
+    title: "Une Leçon De Vie Incroyable Se Cache Derrière Cette Histoire Triste",
+    slug: "une-lecon-de-vie-incroyable-histoire-triste",
+    excerpt: "Une histoire poignante sur l'amour, le regret et l'importance des petits gestes quotidiens dans un couple. Découvrez comment un simple rituel peut réveiller des sentiments profonds et nous rappeler ce qui compte vraiment.",
+    content: `
+<p>Ce soir-là, en rentrant à la maison, ma femme m'attendait avec le dîner. Je lui ai pris la main et, le cœur lourd, j'ai murmuré : "J'ai quelque chose à te dire." Elle s'est assise en silence, son regard trahissant une douleur qu'elle essayait de cacher.</p>
+
+<p>Finalement, j'ai lâché la bombe : "Je veux divorcer." Elle n'a pas réagi tout de suite. D'une voix calme, elle a simplement demandé "Pourquoi ?". Incapable d'affronter cette question, j'ai détourné le regard. Elle a jeté ses couverts et, le cœur brisé, m'a crié : "Tu n'es pas un homme !" Cette nuit-là, nous n'avons pas échangé un mot. Je l'entendais pleurer, mais je suis resté silencieux.</p>
+
+<p>En vérité, je pensais à une autre femme. Jane.</p>
+
+<p>Rempli de culpabilité, j'ai rédigé une lettre de divorce, lui laissant la maison, la voiture et 30 % de ma société. Sans un mot, elle l'a déchirée en mille morceaux. Dix ans de mariage venaient de s'effondrer sous mes yeux.</p>
+
+<p>Le lendemain matin, elle m'a tendu une lettre. Ce n'était pas une demande d'argent ni un cri de désespoir. Elle avait une seule exigence : que pendant un mois, nous fassions semblant de vivre normalement. Notre fils passait ses examens, elle voulait lui épargner un traumatisme.</p>
+
+<p>Puis, elle a ajouté une condition étrange : chaque matin, je devais la porter de notre chambre jusqu'à la porte, comme le jour de notre mariage.</p>
+
+<p>J'ai trouvé cela absurde, mais j'ai accepté.</p>
+
+<h2>Un rituel qui a tout changé.</h2>
+
+<p>Le premier jour, alors que je la soulevais maladroitement, notre fils s'est écrié : "Papa porte maman !" J'ai senti un pincement au cœur.</p>
+
+<p>Le deuxième jour, elle s'est blottie contre moi. J'ai senti son parfum, et réalisé que cela faisait des années que je ne l'avais pas regardée vraiment. Des rides marquaient son visage, quelques cheveux gris s'étaient glissés dans sa chevelure…</p>
+
+<p>Le quatrième jour, une étrange proximité renaissait. Je redécouvrais cette femme qui avait partagé ma vie pendant dix ans.</p>
+
+<p>Au fil des jours, ce qui avait commencé comme une simple obligation est devenu un moment précieux. Chaque matin, son corps semblait plus léger, et mon cœur plus lourd.</p>
+
+<p>Puis, un matin, elle a essayé plusieurs robes mais aucune ne lui allait. "Elles sont toutes trop grandes," a-t-elle murmuré. C'est là que j'ai compris : elle avait perdu du poids… beaucoup trop de poids.</p>
+
+<p>Notre fils est entré en souriant : "Papa, c'est l'heure de porter maman !" Il était habitué à ce rituel, et cela me bouleversa. Je l'ai prise dans mes bras, plus légère que jamais, et j'ai senti mon cœur se serrer.</p>
+
+<p>À ce moment-là, j'ai compris.</p>
+
+<p>Ce n'était pas l'amour qui avait disparu. C'était l'attention aux petits détails qui s'était effacée avec le temps.</p>
+
+<p>Ce jour-là, après l'avoir déposée à la porte, j'ai pris une décision. Je ne voulais plus divorcer.</p>
+
+<p>Je suis allé voir Jane et lui ai dit : "Je suis désolé. J'ai fait une erreur."</p>
+
+<p>Elle a ri nerveusement et a posé sa main sur mon front : "Tu es malade ?"</p>
+
+<p>Non. J'étais enfin réveillé.</p>
+
+<p>Sur le chemin du retour, j'ai acheté un énorme bouquet de fleurs. J'ai demandé à la fleuriste d'écrire un mot sur la carte : "Je te porterai chaque matin jusqu'à ce que la mort nous sépare."</p>
+
+<p>Je suis rentré, le cœur léger, prêt à lui annoncer que je voulais tout recommencer…</p>
+
+<p>Mais elle était allongée sur notre lit. Sans vie.</p>
+
+<p>Elle voulait juste me protéger…</p>
+
+<p>Pendant des mois, elle se battait contre un cancer dont je n'avais même pas remarqué les signes. Trop occupé par ma liaison, trop aveuglé par ma propre indifférence.</p>
+
+<p>Ce mois qu'elle m'avait demandé, ce n'était pas pour notre fils. C'était pour moi.</p>
+
+<p>Elle voulait que je garde une belle image d'elle. Que je sois, aux yeux de notre fils, un mari aimant, et non un homme qui l'a abandonnée.</p>
+
+<h2>Morale de l'histoire</h2>
+
+<p>Les petits détails font les grandes histoires d'amour. Ce ne sont ni la maison, ni la voiture, ni l'argent qui construisent un couple. Ce sont les gestes quotidiens. Apprenez à voir votre partenaire, à écouter, à apprécier ces petits riens qui créent l'intimité. Ne laissez jamais la routine éteindre l'amour.</p>
+    `,
+    imageUrl: "/lovable-uploads/lecon-de-vie.jpg",
+    publishedAt: new Date().toISOString(),
+    tags: ["amour", "couple", "vie", "leçons de vie", "relations", "mariage"]
   }
 ];

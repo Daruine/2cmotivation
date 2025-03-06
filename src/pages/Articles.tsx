@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { articles } from "@/data/articles";
 import { Link } from "react-router-dom";
+import { ArticleTags } from "@/components/ArticleTags";
 
 const Articles = () => {
   return (
@@ -22,7 +23,8 @@ const Articles = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{article.title}</h3>
                   <p className="text-gray-600 mb-4">{article.excerpt}</p>
-                  <Link to={`/articles/${article.id}`}>
+                  <ArticleTags tags={article.tags} />
+                  <Link to={`/articles/${article.id}`} className="block mt-4">
                     <Button variant="outline" className="w-full">Lire Plus</Button>
                   </Link>
                 </div>

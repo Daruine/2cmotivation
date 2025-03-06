@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
@@ -6,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { articles } from "@/data/articles";
 import { Newsletter } from "@/components/Newsletter";
 import { useToast } from "@/hooks/use-toast";
+import { ArticleTags } from "@/components/ArticleTags";
 
 const ArticleDetail = () => {
   const { id } = useParams();
@@ -72,6 +72,8 @@ const ArticleDetail = () => {
               className="w-full h-full object-cover"
             />
           </div>
+          
+          <ArticleTags tags={article.tags} />
           
           <div className="prose prose-lg max-w-none mb-8" dangerouslySetInnerHTML={{ __html: article.content }} />
           
