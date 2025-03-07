@@ -7,37 +7,26 @@ interface Video {
   title: string;
   description: string;
   url: string;
+  youtubeLink: string;
   format: "16:9" | "9:16";
 }
 
 const sampleVideos: Video[] = [
   {
     id: "1",
-    title: "Il n'y a pas de raccourci tout finira pas payer…🤲🏻❤️‍🔥 #motivation #islam #developpementpersonnel",
-    description: "Les épreuves que vous traversez aujourd'hui vous rendront plus fort pour demain.",
-    url: "https://www.youtube.com/embed/slTUgQuvg7Y",
+    title: "Le discours de Charlie Chaplin que tout le monde devrait écouter | Le dictateur",
+    description: "Ne manquez pas cette vidéo inspirante ! Découvrez ce discours emblématique de Charlie Chaplin dans \"Le Dictateur\", il partage un message puissant et intemporel que tout le monde devrait écouter. Ce discours est plus pertinent que jamais dans le monde d'aujourd'hui.",
+    url: "https://www.youtube.com/embed/1OuVY-av4FQ",
+    youtubeLink: "https://youtu.be/1OuVY-av4FQ",
     format: "16:9"
   },
   {
     id: "2",
-    title: "Appréciez chaque moment de votre vie! 🤲🏻❤️‍🔥 #motivation #islam #developpementpersonnel",
-    description: "Un message inspirant sur l'importance d'apprécier chaque instant de notre vie.",
-    url: "https://www.youtube.com/embed/rM4LgPbkQ7A",
-    format: "9:16"
-  },
-  {
-    id: "3",
-    title: "La vie est un test…🤲🏻❤️‍🔥 #motivation #islam #developpementpersonnel",
-    description: "Un rappel puissant que chaque épreuve dans la vie est un test qui nous fait grandir.",
-    url: "https://www.youtube.com/embed/4pnr1YRP-ug",
-    format: "9:16"
-  },
-  {
-    id: "4",
-    title: "La vie est une question de patience…🤲🏻❤️‍🔥 #motivation #islam #developpementpersonnel",
-    description: "Une réflexion sur l'importance de la patience dans notre parcours de vie.",
-    url: "https://www.youtube.com/embed/GN_8rzjIKNM",
-    format: "9:16"
+    title: "CITATIONS DES MÉCHANTS QUI AVAIENT ABSOLUMENT RAISON",
+    description: "Les méchants nous laissent presque toujours des citations profondes dans les films et, bien souvent, nous ne réalisons pas qu'ils ont aussi leur raison. Un méchant et un héros ne sont pas si différents si l'on se place à différents points de vue chacun fait ce qu'il croit être le mieux pour ceux qui l'entourent. Les méchants sont-ils toujours les Mauvais dans l'histoire ? ou est-ce parce qu'ils voient seulement ce que les autres ne peuvent pas voir et qu'ils sont prêts à sacrifier leur vie si nécessaire pour y parvenir.",
+    url: "https://www.youtube.com/embed/slTUgQuvg7Y",
+    youtubeLink: "https://youtu.be/slTUgQuvg7Y",
+    format: "16:9"
   }
 ];
 
@@ -65,7 +54,7 @@ export const VideoSection = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{video.title}</h3>
                 <p className="text-gray-600 mb-4">{video.description}</p>
-                <a href={`/videos/${video.id}`}>
+                <a href={video.youtubeLink} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full">Voir la vidéo</Button>
                 </a>
               </div>
