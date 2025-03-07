@@ -5,45 +5,28 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 interface Video {
   id: string;
   title: string;
-  description?: string;
+  description: string;
   url: string;
   youtubeLink: string;
   format: "16:9" | "9:16";
-  isShort?: boolean;
 }
 
 const sampleVideos: Video[] = [
   {
     id: "1",
-    title: "Les vérités profondes d'Ultron #film #marvel #citation #cinema",
-    url: "https://www.youtube.com/embed/jYs6MTBDx0w",
-    youtubeLink: "https://youtube.com/shorts/jYs6MTBDx0w",
-    format: "9:16",
-    isShort: true
+    title: "Le discours de Charlie Chaplin que tout le monde devrait écouter | Le dictateur",
+    description: "Ne manquez pas cette vidéo inspirante ! Découvrez ce discours emblématique de Charlie Chaplin dans \"Le Dictateur\", il partage un message puissant et intemporel que tout le monde devrait écouter. Ce discours est plus pertinent que jamais dans le monde d'aujourd'hui.",
+    url: "https://www.youtube.com/embed/1OuVY-av4FQ",
+    youtubeLink: "https://youtu.be/1OuVY-av4FQ",
+    format: "16:9"
   },
   {
     id: "2",
-    title: "SOYEZ PATIENT DANS LA VIE #motivation #sagesse #inspiration",
-    url: "https://www.youtube.com/embed/dX8aFk6h-i0",
-    youtubeLink: "https://youtube.com/shorts/dX8aFk6h-i0",
-    format: "9:16",
-    isShort: true
-  },
-  {
-    id: "3",
-    title: "Nul ne peut atteindre l'aube sans passer par la nuit #citation #inspiration",
-    url: "https://www.youtube.com/embed/GN_8rzjIKNM",
-    youtubeLink: "https://youtube.com/shorts/GN_8rzjIKNM",
-    format: "9:16",
-    isShort: true
-  },
-  {
-    id: "4",
-    title: "C'est quoi le couple parfait ? #citation #motivation #bonheurconjugal",
-    url: "https://www.youtube.com/embed/rM4LgPbkQ7A",
-    youtubeLink: "https://youtube.com/shorts/rM4LgPbkQ7A",
-    format: "9:16",
-    isShort: true
+    title: "CITATIONS DES MÉCHANTS QUI AVAIENT ABSOLUMENT RAISON",
+    description: "Les méchants nous laissent presque toujours des citations profondes dans les films et, bien souvent, nous ne réalisons pas qu'ils ont aussi leur raison. Un méchant et un héros ne sont pas si différents si l'on se place à différents points de vue chacun fait ce qu'il croit être le mieux pour ceux qui l'entourent. Les méchants sont-ils toujours les Mauvais dans l'histoire ? ou est-ce parce qu'ils voient seulement ce que les autres ne peuvent pas voir et qu'ils sont prêts à sacrifier leur vie si nécessaire pour y parvenir.",
+    url: "https://www.youtube.com/embed/slTUgQuvg7Y",
+    youtubeLink: "https://youtu.be/slTUgQuvg7Y",
+    format: "16:9"
   }
 ];
 
@@ -54,10 +37,10 @@ export const VideoSection = () => {
         <h2 className="section-title text-center mb-12">Vidéos Inspirantes</h2>
         
         {/* Grid de vidéos */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {sampleVideos.map((video) => (
-            <div key={video.id} className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full">
-              <div className={`relative ${video.format === "9:16" ? "max-w-[240px] mx-auto" : "w-full"}`}>
+            <div key={video.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className={`relative ${video.format === "9:16" ? "max-w-[400px] mx-auto" : "w-full"}`}>
                 <AspectRatio ratio={video.format === "16:9" ? 16/9 : 9/16}>
                   <iframe
                     src={video.url}
@@ -68,11 +51,9 @@ export const VideoSection = () => {
                   />
                 </AspectRatio>
               </div>
-              <div className="p-4 flex-grow">
-                <h3 className="text-lg font-bold mb-2 line-clamp-2">{video.title}</h3>
-                {video.description && <p className="text-gray-600 mb-4 line-clamp-3">{video.description}</p>}
-              </div>
-              <div className="p-4 pt-0">
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">{video.title}</h3>
+                <p className="text-gray-600 mb-4">{video.description}</p>
                 <a href={video.youtubeLink} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" className="w-full">Voir la vidéo</Button>
                 </a>
