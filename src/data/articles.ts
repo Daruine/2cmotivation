@@ -1,3 +1,4 @@
+
 import { Article } from "@/types/Article";
 
 export const articles: Article[] = [
@@ -96,7 +97,7 @@ export const articles: Article[] = [
 
 <p>Les petits détails font les grandes histoires d'amour. Ce ne sont ni la maison, ni la voiture, ni l'argent qui construisent un couple. Ce sont les gestes quotidiens. Apprenez à voir votre partenaire, à écouter, à apprécier ces petits riens qui créent l'intimité. Ne laissez jamais la routine éteindre l'amour.</p>
     `,
-    imageUrl: "/lovable-uploads/lecon-de-vie.jpg",
+    imageUrl: "/lovable-uploads/47db423f-e7c6-4af8-9a68-38de8627845f.png",
     publishedAt: new Date().toISOString(),
     tags: ["amour", "couple", "vie", "leçons de vie", "relations", "mariage"]
   }

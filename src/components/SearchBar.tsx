@@ -3,14 +3,17 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // Ici vous pourrez ajouter la logique de recherche
-    console.log("Recherche de :", searchQuery);
+    if (searchQuery.trim()) {
+      navigate(`/recherche?q=${encodeURIComponent(searchQuery.trim())}`);
+    }
   };
 
   return (
