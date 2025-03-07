@@ -15,11 +15,13 @@ const Articles = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {articles.map((article) => (
               <article key={article.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img
-                  src={article.imageUrl}
-                  alt={article.title}
-                  className="w-full h-48 object-cover"
-                />
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={article.imageUrl}
+                    alt={article.title}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{article.title}</h3>
                   <p className="text-gray-600 mb-4">{article.excerpt}</p>

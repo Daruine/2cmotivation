@@ -25,7 +25,9 @@ const APropos = () => {
               la motivation quotidienne sur nos vies.
             </p>
             <div className="text-center">
-              <Button size="lg">Rejoignez Notre Communauté</Button>
+              <a href="https://youtube.com/c/ClaimeCitationsetMotivation/?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
+                <Button size="lg">Rejoignez Notre Communauté</Button>
+              </a>
             </div>
           </div>
         </div>

@@ -31,9 +31,9 @@ const Index = () => {
             <Link to="/citations">
               <Button size="lg">Voir les Citations</Button>
             </Link>
-            <Link to="/a-propos">
+            <a href="https://youtube.com/c/ClaimeCitationsetMotivation/?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline">En Savoir Plus</Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -52,11 +52,13 @@ const Index = () => {
                 className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 animate-fadeIn"
                 style={{ animationDelay: `${0.2 * (index + 1)}s` }}
               >
-                <img
-                  src={article.imageUrl}
-                  alt={article.title}
-                  className="w-full h-48 object-cover"
-                />
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={article.imageUrl}
+                    alt={article.title}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{article.title}</h3>
                   <p className="text-gray-600 mb-4">{article.excerpt}</p>
@@ -85,9 +87,9 @@ const Index = () => {
             vous fournir une inspiration quotidienne et des ressources pratiques pour vous aider à atteindre
             vos objectifs et vivre une vie plus épanouissante.
           </p>
-          <Link to="/a-propos">
+          <a href="https://youtube.com/c/ClaimeCitationsetMotivation/?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg">En Savoir Plus Sur Nous</Button>
-          </Link>
+          </a>
         </div>
       </section>
     </div>
