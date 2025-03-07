@@ -12,6 +12,8 @@ export const SearchBar = () => {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
+      // Add console logging to debug search functionality
+      console.log("Searching for:", searchQuery.trim());
       navigate(`/recherche?q=${encodeURIComponent(searchQuery.trim())}`);
     }
   };
