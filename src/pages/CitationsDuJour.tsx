@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { Newsletter } from "@/components/Newsletter";
 import { dailyQuotes, formatDateFr } from "@/utils/dailyQuotes";
 import { QuoteCard } from "@/components/QuoteCard";
+import { Footer } from "@/components/Footer";
 import { useToast } from "@/components/ui/use-toast";
 
 const CitationsDuJour = () => {
@@ -54,6 +55,7 @@ const CitationsDuJour = () => {
       </main>
 
       <Newsletter />
+      <Footer />
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { articles } from "@/data/articles";
 import { Link } from "react-router-dom";
 import { ArticleTags } from "@/components/ArticleTags";
+import { Footer } from "@/components/Footer";
 
 const Articles = () => {
   return (
@@ -35,6 +36,7 @@ const Articles = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

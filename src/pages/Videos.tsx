@@ -4,6 +4,7 @@ import { VideoSection } from "@/components/VideoSection";
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { ExternalLink } from "lucide-react";
+import { Footer } from "@/components/Footer";
 
 interface ShortVideo {
   id: string;
@@ -82,6 +83,7 @@ const Videos = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 };

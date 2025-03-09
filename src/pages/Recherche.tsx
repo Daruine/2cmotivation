@@ -1,4 +1,3 @@
-
 import { Navbar } from "@/components/Navbar";
 import { SearchBar } from "@/components/SearchBar";
 import { useState, useEffect } from "react";
@@ -7,6 +6,7 @@ import { articles } from "@/data/articles";
 import { Article } from "@/types/Article";
 import { ArticleTags } from "@/components/ArticleTags";
 import { Link } from "react-router-dom";
+import { Footer } from "@/components/Footer";
 
 interface SearchResult {
   type: 'citation' | 'article' | 'video';
@@ -78,6 +78,7 @@ const Recherche = () => {
           )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

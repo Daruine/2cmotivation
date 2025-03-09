@@ -1,6 +1,7 @@
 
 import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
+import { Footer } from "@/components/Footer";
 
 const APropos = () => {
   return (
@@ -32,6 +33,7 @@ const APropos = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

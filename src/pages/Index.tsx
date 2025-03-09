@@ -1,10 +1,10 @@
-
 import { Navbar } from "@/components/Navbar";
 import { Newsletter } from "@/components/Newsletter";
 import { VideoSection } from "@/components/VideoSection";
 import { SearchBar } from "@/components/SearchBar";
 import { QuoteOfTheDay } from "@/components/QuoteOfTheDay";
 import { Button } from "@/components/ui/button";
+import { Footer } from "@/components/Footer";
 import { Link } from "react-router-dom";
 import { articles } from "@/data/articles";
 
@@ -92,6 +92,8 @@ const Index = () => {
           </a>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };

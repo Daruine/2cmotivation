@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navbar";
 import { QuoteOfTheDay } from "@/components/QuoteOfTheDay";
 import { QuoteCard } from "@/components/QuoteCard";
 import { Button } from "@/components/ui/button";
+import { Footer } from "@/components/Footer";
 import { allQuotes } from "@/utils/allQuotes";
 
 const Citations = () => {
@@ -67,6 +68,7 @@ const Citations = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 };
