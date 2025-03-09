@@ -15,7 +15,7 @@ export const Navbar = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center gap-2">
               <img 
-                src="/lovable-uploads/617718f3-4ea5-4681-ae22-5b6143430b90.png" 
+                src="/lovable-uploads/4c978fdc-585e-428e-bf7b-c752f1c78868.png" 
                 alt="2C Motivation Logo" 
                 className="h-10 w-auto"
               />
